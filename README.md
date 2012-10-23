@@ -73,9 +73,9 @@ The only way that will work is if:
 At this point the engine is mounted and accessible via the endpoint you specified. But the idea here is that the
 reporting tool should be available at all times, on all pages. To make that happen:
 
-1) Add `//= require report_button` to your application.js manifest
+1) Add `//= require public_tracker/report_button` to your application.js manifest
 
-2) Add `*= require report_button` to your application.css manifest
+2) Add `*= require public_tracker/report_button` to your application.css manifest
 
 The button should now appear.
 
