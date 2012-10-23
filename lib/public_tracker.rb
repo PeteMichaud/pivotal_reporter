@@ -1,4 +1,5 @@
 require "public_tracker/engine"
+require 'pivotal-tracker'
 
 module PublicTracker
   class Engine < Rails::Engine
