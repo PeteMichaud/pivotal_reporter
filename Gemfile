@@ -17,5 +17,3 @@ gem "jquery-rails"
 # gem 'debugger'
 
 gem 'pivotal-tracker'
-gem 'font-awesome-rails'
-gem 'thin'
