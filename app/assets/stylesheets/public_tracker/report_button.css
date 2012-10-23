@@ -5,6 +5,7 @@
     top:0;
     right:0;
     background:#c9f1ff;
+    z-index:100;
 }
 
 #public_tracker {
@@ -15,6 +16,7 @@
     right:0;
     background: #c9f1ff;
     border-radius: 5px;
+    z-index:100;
 }
 
 #public_tracker_window {
