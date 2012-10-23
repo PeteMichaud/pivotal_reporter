@@ -9,6 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require report_button
+ *= require public_tracker/report_button
  *= require_tree .
  */
