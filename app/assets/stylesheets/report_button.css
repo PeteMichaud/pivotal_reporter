@@ -1,0 +1,26 @@
+#pt_report_button {
+    display:block;
+    padding:10px;
+    position:absolute;
+    top:0;
+    right:0;
+    background:#c9f1ff;
+}
+
+#public_tracker {
+    width:450px;
+    height:450px;
+    position:absolute;
+    top:25px;
+    right:0;
+    background: #c9f1ff;
+    border-radius: 5px;
+}
+
+#public_tracker_window {
+    width:430px;
+    height:430px;
+    margin:10px;
+    border:0;
+    overflow:hidden;
+}

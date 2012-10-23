@@ -1,0 +1,29 @@
+<% if flash[:success] %>
+    <div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<form method="post" action="<%= PublicTracker::Engine.config.mount_point %>/stories">
+    <label for="story[story_type]">Type</label>
+    <select name="story[story_type]">
+      <option value="bug">Bug</option>
+      <option value="feature">Feature</option>
+    </select>
+    <br />
+
+    <label for="story[name]">Title</label>
+    <input type="text" name="story[name]" />
+    <br />
+
+    <label for="story[description]">Description</label>
+    <textarea name="story[description]"></textarea>
+    <br />
+
+    <input type="hidden" name="story[labels]" value="<%= pivotal_labels %>" />
+    <input type="hidden" name="story[project_id]" value="<%= PublicTracker::Engine.config.project_id %>" />
+    <input type="hidden" name="story[requested_by]" value="<%= requested_by %>" />
+
+    <input type="submit" value="Report" />
+
+</form>
+
+<%= link_to "View Your Active Submissions", stories_path %>

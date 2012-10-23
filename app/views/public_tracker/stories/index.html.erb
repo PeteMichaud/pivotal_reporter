@@ -1,0 +1,21 @@
+<%= link_to "Submit New Report", new_story_path  %>
+<table>
+  <thead>
+  <tr>
+    <th class="type">Type</th>
+    <th class="status">Status</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @stories.each do |story| %>
+    <tr>
+      <td class="type"><a href="<%= story.url %>" class="<%= story.story_type %>" title="<%= story.story_type %> <%= story.id %>"><%= story.story_type[0].capitalize %></a></td>
+      <td class="status"><%= story.current_state.capitalize %></td>
+      <td><%= story.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Submit New Report", new_story_path  %>

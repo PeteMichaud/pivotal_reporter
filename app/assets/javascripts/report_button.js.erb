@@ -1,0 +1,13 @@
+$(document).ready(function(){
+    $pt_toggle = $('<a href="#" id="pt_report_button">Report</a>');
+    $pt_container = $('<div id="public_tracker">');
+    $pt_frame = $('<iframe id="public_tracker_window" border="0" >').attr('src', '<%= PublicTracker::Engine.config.mount_point %>');
+    $pt_container.append($pt_frame).hide();
+
+    $pt_toggle.click(function(e){
+        $pt_container.toggle();
+    });
+
+    $('body').append($pt_toggle).append($pt_container);
+
+});

@@ -1,0 +1,79 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+body {
+    background: #fff;
+}
+
+table {
+    margin:15px auto;
+    width:95%;
+}
+
+thead {
+    font-weight:900;
+    background: #cce8ff;
+}
+
+td {
+    padding:5px;
+}
+
+tr {
+    border-bottom:1px solid #ddd;
+}
+
+.status, .type {
+    width:50px;
+    text-align: center;
+}
+
+.type a {
+    display:block;
+    width:25px;
+    height:25px;
+    line-height:25px;
+    border-radius: 5px;
+    background:#eee;
+    margin:0 auto;
+    color:#fff;
+    text-decoration: none;
+}
+
+.type a.bug {
+    background:#900;
+}
+
+.type a.feature {
+    background: #009;
+}
+
+label {
+    float:left;
+    width:100px;
+    text-align: right;
+    margin:0 10px 0 0
+}
+
+select, input, textarea {
+    width:200px
+}
+
+textarea {
+    height:100px;
+}
+
+input[type="submit"] {
+    margin-left:110px;
+}
+
+.success {
+    width:85%;
+    padding:10px;
+    margin:15px auto;
+    border:1px solid #090;
+    border-radius: 5px;
+    background:#dbffb7;
+}
