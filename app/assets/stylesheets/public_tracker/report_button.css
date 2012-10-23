@@ -9,7 +9,7 @@
 }
 
 #public_tracker {
-    width:450px;
+    width:380px;
     height:450px;
     position:absolute;
     top:25px;
@@ -20,7 +20,7 @@
 }
 
 #public_tracker_window {
-    width:430px;
+    width:360px;
     height:430px;
     margin:10px;
     border:0;
