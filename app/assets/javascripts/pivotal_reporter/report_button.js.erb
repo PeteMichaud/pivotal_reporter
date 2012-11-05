@@ -1,13 +1,44 @@
 $(document).ready(function(){
-    $pr_toggle = $('<a href="#" id="pr_report_button">Report</a>');
+    var slide_action    = -1;
+    var container_width = -1;
+
+    $pr_toggle = $('<a href="#" id="pr_report_button">!</a>');
     $pr_container = $('<div id="pivotal_reporter">');
     $pr_frame = $('<iframe id="pivotal_reporter_window" border="0" >').attr('src', '<%= PivotalReporter::Engine.config.mount_point %>');
     $pr_container.append($pr_frame).hide();
 
     $pr_toggle.click(function(e){
-        $pr_container.toggle();
+        h_slide_toggle($pr_container)
     });
 
+    $pr_container
+        .mouseover(function(e) {
+            clearTimeout(slide_action);
+        })
+        .mouseout(function(e) {
+            slide_action = setTimeout(toggle_report_window, 500);
+        });
+
     $('body').prepend($pr_container).prepend($pr_toggle);
+
+    var container_width = $pr_container.width();
+
+    $pr_container.css('width', 0).css('top', $pr_toggle.css('top')).show();
+
+    function toggle_report_window()
+    {
+        h_slide_toggle($pr_container);
+    }
+    function h_slide_toggle($obj)
+    {
+        var new_w = $obj.css('width') == '0px' ? container_width : 0;
+
+        $obj.animate(
+            {
+                width: new_w
+            },
+            250,
+            'swing');
+    }
 
 });
