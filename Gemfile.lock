@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pivotal_reporter (0.1.0)
+    pivotal_reporter (0.5.0)
       pivotal-tracker
       rails (~> 3.2.3)
 
@@ -102,7 +102,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.34)
+    tzinfo (0.3.35)
 
 PLATFORMS
   ruby
