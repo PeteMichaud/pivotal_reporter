@@ -1,4 +1,4 @@
-module PublicTracker
+module PivotalReporter
   class ApplicationController < ActionController::Base
 
     PivotalTracker::Client.token = PivotalReporter::Engine.config.token

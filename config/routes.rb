@@ -1,4 +1,4 @@
-PublicTracker::Engine.routes.draw do
+PivotalReporter::Engine.routes.draw do
 
   resources :stories
 

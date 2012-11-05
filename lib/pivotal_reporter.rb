@@ -5,7 +5,7 @@ module PivotalReporter
   class Engine < Rails::Engine
 
     initializer "pivotal_reporter.configure_rails_initialization" do |app|
-      # Engine configures Rails app here, this is not what my question was about
+      #
     end
 
   end

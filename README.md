@@ -59,7 +59,7 @@ your project ID, go to the project page in PivotalTracker and look at the url. T
 literally just a name like "Pete Michaud" and should correspond exactly to the name of a project member who has access
 to the project in PivotalTracker (otherwise the report submission will fail). Ideally this will be a generic "API user".
 
-Alternatively, you can choose not to specify a request_user. What happens in that case is PublicTracker will look for a
+Alternatively, you can choose not to specify a request_user. What happens in that case is PivotalReporter will look for a
 variable called current_user (the devise gem, for example, would define current_user), and it calls the full_name method
 on current_user. So instead of using "Pete Michaud" it would use `current_user.full_name`.
 

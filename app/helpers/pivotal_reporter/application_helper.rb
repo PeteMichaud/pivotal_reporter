@@ -1,4 +1,4 @@
-module PublicTracker
+module PivotalReporter
   module ApplicationHelper
 
     def pivotal_labels
@@ -6,7 +6,7 @@ module PublicTracker
     end
 
     def requested_by
-      PublicTracker::Engine.config.request_user || current_user.full_name
+      PivotalReporter::Engine.config.request_user || current_user.full_name
     end
 
 

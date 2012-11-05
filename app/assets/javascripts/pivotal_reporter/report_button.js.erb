@@ -2,7 +2,7 @@ $(document).ready(function(){
     $pr_toggle = $('<a href="#" id="pr_report_button">Report</a>');
     $pr_container = $('<div id="pivotal_reporter">');
     $pr_frame = $('<iframe id="pivotal_reporter_window" border="0" >').attr('src', '<%= PivotalReporter::Engine.config.mount_point %>');
-    $pr_container.append($pr_frame).hide();r
+    $pr_container.append($pr_frame).hide();
 
     $pr_toggle.click(function(e){
         $pr_container.toggle();

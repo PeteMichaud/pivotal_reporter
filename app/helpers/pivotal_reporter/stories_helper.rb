@@ -1,4 +1,4 @@
-module PublicTracker
+module PivotalReporter
   module StoriesHelper
   end
 end
