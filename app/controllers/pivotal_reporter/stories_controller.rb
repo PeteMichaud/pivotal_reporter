@@ -21,8 +21,8 @@ module PivotalReporter
         flash[:error] = "Report Submission Failed: #{story.errors}"
       else
         flash[:success] = 'Report Submitted!'
-        #redirect_to stories_path
       end
+
       redirect_to new_story_path
     end
   end
