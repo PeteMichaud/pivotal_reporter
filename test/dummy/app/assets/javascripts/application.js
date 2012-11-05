@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require public_tracker/report_button
+//= require pivotal_reporter/report_button
 //= require_tree .

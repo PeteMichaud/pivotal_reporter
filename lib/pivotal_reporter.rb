@@ -1,10 +1,10 @@
-require "public_tracker/engine"
+require "pivotal_reporter/engine"
 require 'pivotal-tracker'
 
-module PublicTracker
+module PivotalReporter
   class Engine < Rails::Engine
 
-    initializer "public_tracker.configure_rails_initialization" do |app|
+    initializer "pivotal_reporter.configure_rails_initialization" do |app|
       # Engine configures Rails app here, this is not what my question was about
     end
 

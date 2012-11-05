@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    $pt_toggle = $('<a href="#" id="pt_report_button">Report</a>');
-    $pt_container = $('<div id="public_tracker">');
-    $pt_frame = $('<iframe id="public_tracker_window" border="0" >').attr('src', '<%= PublicTracker::Engine.config.mount_point %>');
-    $pt_container.append($pt_frame).hide();
+    $pr_toggle = $('<a href="#" id="pr_report_button">Report</a>');
+    $pr_container = $('<div id="pivotal_reporter">');
+    $pr_frame = $('<iframe id="pivotal_reporter_window" border="0" >').attr('src', '<%= PivotalReporter::Engine.config.mount_point %>');
+    $pr_container.append($pr_frame).hide();r
 
-    $pt_toggle.click(function(e){
-        $pt_container.toggle();
+    $pr_toggle.click(function(e){
+        $pr_container.toggle();
     });
 
-    $('body').prepend($pt_container).prepend($pt_toggle);
+    $('body').prepend($pr_container).prepend($pr_toggle);
 
 });

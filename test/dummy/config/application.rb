@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require
-require "public_tracker"
+require "pivotal_reporter"
 
 module Dummy
   class Application < Rails::Application
@@ -55,7 +55,7 @@ module Dummy
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    PublicTracker.config do |config|
+    PivotalReporter.config do |config|
       config.token = '4ca56f99dd0ff0165c72f4d1187719c7'
       config.project_id = 625931
       config.mount_point = '/tracker'

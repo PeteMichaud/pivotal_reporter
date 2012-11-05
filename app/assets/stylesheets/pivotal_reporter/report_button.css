@@ -1,4 +1,4 @@
-#pt_report_button {
+#pr_report_button {
     display:block;
     padding:10px;
     position:absolute;
@@ -8,7 +8,7 @@
     z-index:2000;
 }
 
-#public_tracker {
+#pivotal_reporter {
     width:380px;
     height:450px;
     position:absolute;
@@ -19,7 +19,7 @@
     z-index:2000;
 }
 
-#public_tracker_window {
+#pivotal_reporter_window {
     width:360px;
     height:430px;
     margin:10px;

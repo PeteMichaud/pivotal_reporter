@@ -1,14 +1,15 @@
-public_tracker
+Pivotal Reporter
 ==============
 
-Public Tracker is a Rails Mountable Engine that injects a reporting overlay for rails applications that ties into PivotalTracker in order to provide in-app bug reporting and feature requests.
+Pivotal Reporter is a Rails Mountable Engine that injects a reporting overlay for rails applications that ties into
+PivotalTracker in order to provide in-app bug reporting and feature requests.
 
 Installation
 ============
 
 ## Install the Gem
 
-    gem 'public_tracker', :git => 'git://github.com/7eyesllc/public_tracker.git'
+    gem 'pivotal_reporter', :git => 'git://github.com/7eyesllc/pivotal_reporter.git'
 
     bundle install
 
@@ -17,14 +18,14 @@ Installation
 In routes.rb:
 
 ```ruby
-    mount PublicTracker::Engine => "/tracker" # can be mounted at whatever endpoint you want, not just /tracker
+    mount PivotalReporter::Engine => "/tracker" # can be mounted at whatever endpoint you want, not just /tracker
 ```
 
 If you want to limit the engine to logged in users with devise then:
 
 ```ruby
 authenticated :user do
-    mount PublicTracker::Engine => "/tracker" # can be mounted at whatever endpoint you want, not just /tracker
+    mount PivotalReporter::Engine => "/tracker" # can be mounted at whatever endpoint you want, not just /tracker
 end
 ```
 
@@ -32,12 +33,12 @@ end
 
 Add the top of the /config/application.rb:
 
-    require "public_tracker"
+    require "pivotal_reporter"
 
-Inside the application class defininion in /config/application.rb:
+Inside the application class definition in /config/application.rb:
 
 ```ruby
-PublicTracker.config do |config|
+PivotalReporter.config do |config|
   config.token = '<your_api_token>'
   config.project_id = <your_project_id>
   config.mount_point = '/tracker'
@@ -73,9 +74,9 @@ The only way that will work is if:
 At this point the engine is mounted and accessible via the endpoint you specified. But the idea here is that the
 reporting tool should be available at all times, on all pages. To make that happen:
 
-1) Add `//= require public_tracker/report_button` to your application.js manifest
+1) Add `//= require pivotal_reporter/report_button` to your application.js manifest
 
-2) Add `*= require public_tracker/report_button` to your application.css manifest
+2) Add `*= require pivotal_reporter/report_button` to your application.css manifest
 
 The button should now appear.
 
@@ -86,7 +87,7 @@ If you want to change the style of the widget, add these definitions to your app
 ```css
 a#pt_report_button { } /* The Report button itself */
 
-div#public_tracker { } /* The frame that appears after clicking the Report button */
+div#pivotal_reporter { } /* The frame that appears after clicking the Report button */
 ```
 
 If you want to style the report form or report list you'll have to fork and edit the engine repo. If that sounds

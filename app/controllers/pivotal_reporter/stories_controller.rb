@@ -1,6 +1,6 @@
-require_dependency "public_tracker/application_controller"
+require_dependency "pivotal_reporter/application_controller"
 
-module PublicTracker
+module PivotalReporter
   class StoriesController < ApplicationController
     def index
       @stories = pivotal_project.stories.all(label: pivotal_unique_label)

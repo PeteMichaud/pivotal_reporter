@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :public_tracker do
+# task :pivotal_reporter do
 #   # Task goes here
 # end
