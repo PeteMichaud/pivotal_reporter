@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  mount PublicTracker::Engine => "/tracker"
+  mount PivotalReporter::Engine => "/tracker"
   root :to => 'home#show'
 end

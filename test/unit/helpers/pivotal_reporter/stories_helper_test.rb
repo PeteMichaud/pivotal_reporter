@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module PublicTracker
+module PivotalReporter
   class StoriesHelperTest < ActionView::TestCase
   end
 end
