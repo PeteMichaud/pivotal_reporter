@@ -77,3 +77,31 @@ input[type="submit"] {
     border-radius: 5px;
     background:#dbffb7;
 }
+
+a.accept-btn, a.reject-btn {
+    display:block;
+    height:25px;
+    line-height:25px;
+    border-radius: 5px;
+    background:#eee;
+    margin:0 auto;
+    color:#fff;
+    text-decoration: none;
+}
+
+a.accept-btn {
+    background:#090;
+    margin-bottom:5px;
+}
+
+a.accept-btn:hover{
+    background:#0e0;
+}
+
+a.reject-btn {
+    background:#900;
+}
+
+a.reject-btn:hover{
+    background:#e00;
+}
