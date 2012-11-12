@@ -25,5 +25,22 @@ module PivotalReporter
 
       redirect_to new_story_path
     end
+
+    def accept
+      @story = pivotal_project.stories.find(params[:id])
+      @story.update({current_state: 'accepted'})
+
+      redirect_to stories_path
+    end
+
+    def reject
+      @story = pivotal_project.stories.find(params[:id])
+      @story.update({current_state: 'rejected'})
+      @story.notes.create(:text => URI.decode(params[:reject_message]))
+
+      redirect_to stories_path
+    end
+
+
   end
 end
