@@ -11,7 +11,13 @@
   <% @stories.each do |story| %>
     <tr>
       <td class="type"><a href="<%= story.url %>" class="<%= story.story_type %>" title="<%= story.story_type %> <%= story.id %>"><%= story.story_type[0].capitalize %></a></td>
-      <td class="status"><%= story.current_state.capitalize %></td>
+      <td class="status">
+        <%= story.current_state.capitalize %>
+        <% if story.current_state == 'delivered' %>
+            <%= link_to 'Accept', accept_story_path(story.id), class: 'accept-btn' %>
+            <%= link_to 'Reject', '#', class: 'reject-btn', :'data-reject-path' => reject_story_path(story.id) %>
+        <% end %>
+      </td>
       <td><%= story.name %></td>
     </tr>
   <% end %>
