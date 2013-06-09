@@ -43,6 +43,7 @@ PivotalReporter.config do |config|
   config.project_id = <your_project_id>
   config.mount_point = '/tracker'
   config.request_user = '<your_request_user>'
+  config.enabled = true
 end
 ```
 

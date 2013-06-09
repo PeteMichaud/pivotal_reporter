@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    var slide_action    = -1;
+
+    if(!PivotalReporter::Engine.config.enabled) return;
+
+    ar slide_action    = -1;
     var container_width = -1;
 
     $pr_toggle = $('<a href="#" id="pr_report_button" title="Report Bug or Request Feature">!</a>');
